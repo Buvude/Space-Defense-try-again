@@ -43,6 +43,15 @@ public class Enemy : MonoBehaviour
             hitcooldown = false;
             StartCoroutine(ResetMovement());
         }
+
+        if (other.tag == "Mine" && hitcooldown)
+        {
+            knockbackdir = other.transform.position - transform.position;
+            enemyRB.AddForce(knockbackdir * 3f, ForceMode.Impulse);
+            health -= 45;
+            hitcooldown = false;
+            StartCoroutine(ResetMovement());
+        }
     }
 
     IEnumerator ResetMovement()
