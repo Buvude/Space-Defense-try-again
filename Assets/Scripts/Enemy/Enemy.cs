@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour
         {
             knockbackdir = other.transform.position - transform.position;
             enemyRB.AddForce(knockbackdir * 3f, ForceMode.Impulse);
-            health -= 45;
+            health -= 25;
             hitcooldown = false;
             StartCoroutine(ResetMovement());
         }
