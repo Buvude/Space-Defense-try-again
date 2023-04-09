@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
         healthText.gameObject.SetActive(true);
         oxygenText.gameObject.SetActive(true);
         timerText.gameObject.SetActive(true);
+        currencyText.gameObject.SetActive(true);
         StartCoroutine(Timer());
         currencyText.text = towerDefense.scrap + " Scrap";
     }
