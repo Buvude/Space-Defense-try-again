@@ -87,9 +87,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)||Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape)||Input.GetKeyDown(KeyCode.P) && !isGamePaused)
         {
             PauseGame();
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+        {
+            ResumeGame();
         }
         if (breakState == 6)
         {
@@ -104,27 +108,24 @@ public class GameManager : MonoBehaviour
     void PauseGame()
     {
         // can't pause in title and game over screen
-        if (/*Input.GetKeyDown(KeyCode.Escape) &&*/ !pauseScreen.activeInHierarchy /*&& isGameActive*/)
+        if (isGameActive)
         {
             pauseScreen.SetActive(true);
             Time.timeScale = 0;
             isGamePaused = true;
             Debug.Log("Game is paused.");
         }
-        else if (/*Input.GetKeyDown(KeyCode.Escape) &&*/ pauseScreen.activeInHierarchy)
-        {
-            pauseScreen.SetActive(false);
-            Time.timeScale = 1;
-            isGamePaused = false;
-            Debug.Log("Game will resume.");
-        }
+        
     }
 
     public void ResumeGame()
     {
-        pauseScreen.SetActive(false);
-        Time.timeScale = 1f;
-        isGamePaused = false;
+       
+            pauseScreen.SetActive(false);
+            Time.timeScale = 1f;
+            isGamePaused = false;
+            Debug.Log("Game will resume");
+        
     }
 
     public void GameOver()
