@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public TowerDefenseScript towerDefense;
     public int health;
     public TextMeshProUGUI healthText;
     public float oxygen;
@@ -27,14 +28,15 @@ public class GameManager : MonoBehaviour
     public float checkBetween = 5.0f;
     public float repeatRate = 1.0f;
     //public TextMeshProUGUI startScreen;
+    public TextMeshProUGUI currencyText;
 
     // Start is called before the first frame update
     void Awake()
     {
         health = 100;
-        healthText.text = "Health: " + health + "%";
+        healthText.text = health + "%";
         oxygen = 100.0f;
-        oxygenText.text = "O2: " + oxygen + "%";
+        oxygenText.text = oxygen + "%";
         secondsToEnd = timeOfRound;
         isGamePaused = false;
         ShipStatus();
@@ -56,6 +58,7 @@ public class GameManager : MonoBehaviour
         oxygenText.gameObject.SetActive(true);
         timerText.gameObject.SetActive(true);
         StartCoroutine(Timer());
+        currencyText.text = towerDefense.scrap + " Scrap";
     }
 
     void OxygenDrain()
