@@ -20,14 +20,14 @@ public class GameManager : MonoBehaviour
     public bool isGameActive;
     public bool isShipDamaged;
     public float oxygenDrain = 1.0f;
-    //public TextMeshProUGUI gameOverText;
+    public TextMeshProUGUI gameOverText;
     public int cooldown = 10;
     public int breakStateMin = 1;
     public int breakStateMax = 7;
     public int breakState;
     public float checkBetween = 5.0f;
     public float repeatRate = 1.0f;
-    //public TextMeshProUGUI startScreen;
+    public TextMeshProUGUI startScreen;
     public TextMeshProUGUI currencyText;
 
     // Start is called before the first frame update
@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         isGameActive = true;
-        //startScreen.gameObject.SetActive(false);
+        startScreen.gameObject.SetActive(false);
         healthText.gameObject.SetActive(true);
         oxygenText.gameObject.SetActive(true);
         timerText.gameObject.SetActive(true);
@@ -131,7 +131,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         isGameActive = false;
-        //gameOverText.gameObject.SetActive(true);
+        gameOverText.gameObject.SetActive(true);
         healthText.gameObject.SetActive(false);
         oxygenText.gameObject.SetActive(false);
         timerText.gameObject.SetActive(false);
