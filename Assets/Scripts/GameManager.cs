@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
         // can't pause in title and game over screen
         if (isGameActive)
         {
-            pauseScreen.SetActive(true);
+            pauseScreen.gameObject.SetActive(true);
             Time.timeScale = 0;
             isGamePaused = true;
             Debug.Log("Game is paused.");
@@ -121,7 +121,7 @@ public class GameManager : MonoBehaviour
     public void ResumeGame()
     {
        
-            pauseScreen.SetActive(false);
+            pauseScreen.gameObject.SetActive(false);
             Time.timeScale = 1f;
             isGamePaused = false;
             Debug.Log("Game will resume");
