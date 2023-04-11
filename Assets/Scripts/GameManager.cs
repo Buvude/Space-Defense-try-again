@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
         {
 
             oxygen -= oxygenDrain * Time.deltaTime;
-            oxygenText.text = "O2: " + oxygen + "%";
+            oxygenText.text = oxygen + "%";
 
 
             if (oxygen == 0)
@@ -169,7 +169,7 @@ public class GameManager : MonoBehaviour
     public void UpdateHealth(int healthToChange)
     {
         health += healthToChange;
-        healthText.text = "Health:" + health + "%";
+        healthText.text = health + "%";
         if (health == 0)
         {
             GameOver();
