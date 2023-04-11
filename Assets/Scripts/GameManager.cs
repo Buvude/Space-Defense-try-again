@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateTimer()
     {
-        timerText.text = $"Time: {secondsToEnd}";
+        timerText.text = $"{secondsToEnd}";
     }
 
     // Update is called once per frame
