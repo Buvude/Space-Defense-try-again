@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
         oxygenText.text = oxygen + "%";
         secondsToEnd = timeOfRound;
         isGamePaused = false;
+        StartGame();//TODO DELETE THIS
         ShipStatus();
     }
 
@@ -53,7 +54,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         isGameActive = true;
-        startScreen.gameObject.SetActive(false);
+        //startScreen.gameObject.SetActive(false);
         healthText.gameObject.SetActive(true);
         oxygenText.gameObject.SetActive(true);
         timerText.gameObject.SetActive(true);
