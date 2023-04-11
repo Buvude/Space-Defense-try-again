@@ -20,7 +20,8 @@ public class TowerDefenseScript : MonoBehaviour
         {
             Instantiate(turret, transform.position, transform.rotation);
             scrap -= 50;
-        }else if (scrap >= 25 && Input.GetKeyDown(KeyCode.G))
+        }
+        else if (scrap >= 25 && Input.GetKeyDown(KeyCode.G))
         {
             Instantiate(mine, transform.position, transform.rotation);
             scrap -= 25;
