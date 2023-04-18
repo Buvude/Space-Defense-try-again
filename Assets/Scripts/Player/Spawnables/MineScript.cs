@@ -19,7 +19,7 @@ public class MineScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             Destroy(gameObject);
         }
