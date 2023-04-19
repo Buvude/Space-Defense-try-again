@@ -12,6 +12,7 @@ public class PlayerShoot : MonoBehaviour
 
     public GameObject projectile;
     private Vector3 randomRotation;
+    public Animator gunSprite;
 
     public bool canShoot = true;
 
@@ -28,6 +29,7 @@ public class PlayerShoot : MonoBehaviour
         {
             Shoot();
             canShoot = false;
+            gunSprite.SetBool("Fire", true);
         }
     }
 
@@ -40,6 +42,8 @@ public class PlayerShoot : MonoBehaviour
         }
         StartCoroutine(Cooldown());
     }
+
+    
 
     IEnumerator Cooldown()
     {
