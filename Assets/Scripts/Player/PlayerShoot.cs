@@ -12,6 +12,7 @@ public class PlayerShoot : MonoBehaviour
 
     public GameObject projectile;
     private Vector3 randomRotation;
+    public AnimationClip Fire;
     public Animator gunSprite;
 
     public bool canShoot = true;
@@ -29,7 +30,8 @@ public class PlayerShoot : MonoBehaviour
         {
             Shoot();
             canShoot = false;
-            gunSprite.SetBool("Fire", true);
+            gunSprite.SetTrigger("Fire");
+            //Fire.
         }
     }
 

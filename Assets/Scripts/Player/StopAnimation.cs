@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StopAnimation : MonoBehaviour
 {
-    public Animator gunSprite;
+    public Animation Fire;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +18,6 @@ public class StopAnimation : MonoBehaviour
     }
     public void stopAnimation()
     {
-        gunSprite.SetBool("Fire", false);
+        
     }
 }
