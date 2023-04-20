@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public float repeatRate = 1.0f;
     public TextMeshProUGUI startScreen;
     public TextMeshProUGUI currencyText;
+    public Enemy enemy;
 
     // Start is called before the first frame update
     void Awake()
@@ -177,9 +178,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void UpdateScrap(int scrapToChange)
+    public void UpdateScrap()
     {
-        towerDefense.scrap += scrapToChange;
+        towerDefense.scrap += enemy.scrapToChange;
         currencyText.text = towerDefense.scrap + " Scrap";
     }
 

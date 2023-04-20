@@ -9,11 +9,13 @@ public class Enemy : MonoBehaviour
     public float health = 50;
     public bool hitcooldown = true;
     public bool isAlive = true;
-    public GameManager gameManager;
+    internal GameManager gameManager;
+    public int scrapToChange;
     // Start is called before the first frame update
     void Start()
     {
         enemyRB = GetComponent<Rigidbody>();
+        gameManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -33,7 +35,7 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         isAlive = false;
-        gameManager.UpdateScrap(5);
+        gameManager.UpdateScrap();
     }
 
     private void OnTriggerEnter(Collider other)
