@@ -104,6 +104,7 @@ MonoBehaviour:
   rightFacing: {fileID: 21300000, guid: 3ef03dc39aed00544b8ff56d90f9270b, type: 3}
   awayFacing: {fileID: 21300000, guid: 7ca45df4908ec0748948c031869bcedd, type: 3}
   Player: {fileID: 0}
+  thisSpriteState: 0
 --- !u!1 &3560461428540477023
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +167,7 @@ MonoBehaviour:
   CurrentHome: {fileID: 0}
   nextTarget: {fileID: 0}
   CurrentTarget: {x: 0, y: 0, z: 0}
-  CurrentState: 1
+  CurrentState: 5
 --- !u!114 &849882520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,6 +264,8 @@ MonoBehaviour:
   enemyRB: {fileID: 0}
   health: 50
   hitcooldown: 1
+  isAlive: 1
+  gameManager: {fileID: 0}
 --- !u!195 &5896782968322408425
 NavMeshAgent:
   m_ObjectHideFlags: 0
