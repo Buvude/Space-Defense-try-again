@@ -177,6 +177,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void UpdateScrap(int scrapToChange)
+    {
+        towerDefense.scrap += scrapToChange;
+        currencyText.text = towerDefense.scrap + " Scrap";
+    }
+
     public IEnumerator BreakShip()
     {
         //for (int i = 0; i < breakState; i++)
