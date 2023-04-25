@@ -266,6 +266,7 @@ MonoBehaviour:
   hitcooldown: 1
   isAlive: 1
   gameManager: {fileID: 0}
+  scrapToChange: 50
 --- !u!195 &5896782968322408425
 NavMeshAgent:
   m_ObjectHideFlags: 0

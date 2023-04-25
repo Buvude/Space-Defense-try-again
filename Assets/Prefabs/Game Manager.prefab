@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2527502209018984574}
   m_Layer: 0
   m_Name: Game Manager
-  m_TagString: Untagged
+  m_TagString: Game Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca10727ca1136474b9fbf6f449e6d6d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerDefense: {fileID: 0}
   health: 0
   healthText: {fileID: 0}
   oxygen: 0
@@ -55,4 +56,14 @@ MonoBehaviour:
   isGamePaused: 0
   isGameActive: 0
   isShipDamaged: 0
-  damageManager: {fileID: 1445921988568234606, guid: 8a958110cc1cc4248b1a91907d0597a3, type: 3}
+  oxygenDrain: 1
+  gameOverText: {fileID: 0}
+  cooldown: 10
+  breakStateMin: 1
+  breakStateMax: 7
+  breakState: 0
+  checkBetween: 5
+  repeatRate: 1
+  startScreen: {fileID: 0}
+  currencyText: {fileID: 0}
+  enemy: {fileID: 0}

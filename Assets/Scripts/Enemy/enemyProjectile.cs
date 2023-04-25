@@ -33,7 +33,7 @@ public class enemyProjectile : MonoBehaviour
                 break;
         }
         //print("Trigger entered");
-        if (gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             gameManager.UpdateHealth(-10);
         }
