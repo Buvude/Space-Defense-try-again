@@ -11,11 +11,13 @@ public class Enemy : MonoBehaviour
     public bool isAlive = true;
     internal GameManager gameManager;
     public int scrapToChange;
+    private SpawnManager spawner;
     // Start is called before the first frame update
     void Start()
     {
         enemyRB = GetComponent<Rigidbody>();
         gameManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<GameManager>();
+        spawner = GameObject.FindGameObjectWithTag("Spawn Manager").GetComponent<SpawnManager>();
     }
 
     // Update is called once per frame
@@ -31,6 +33,7 @@ public class Enemy : MonoBehaviour
     {
         isAlive = false;
         gameManager.UpdateScrap();
+        spawner.enemyCount -= 1;
     }
 
     private void OnTriggerEnter(Collider other)
