@@ -8,7 +8,7 @@ public class Panel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
