@@ -15,12 +15,14 @@ public class NMA : MonoBehaviour
     public Vector3 CurrentTarget; 
     private NavMeshAgent agent;
     public EnemyState CurrentState;
+    private Enemy enemyScript;
     // Start is called before the first frame update
     private void Awake()
     {
         agent = this.gameObject.GetComponent<NavMeshAgent>();
         agent.speed = NMAspeed;
         CurrentTarget = new Vector3();
+        enemyScript = GetComponent<Enemy>();
     }
     void Start()
     { 
@@ -123,7 +125,10 @@ public class NMA : MonoBehaviour
                 rotationForAttack.x = Vector3.Angle(transform.position, eLOS.Target.transform.position);
                 rotationForAttack.y = transform.rotation.y;
                 rotationForAttack.z = transform.rotation.z;
-                Instantiate(Fireball, transform.position, transform.rotation);
+                if (enemyScript.isAlive == true)
+                {
+                    Instantiate(Fireball, transform.position, transform.rotation);
+                }
                 yield return new WaitForSeconds(enemyFireCooldown);
                 if (!eLOS.WithinRange())
                 {
