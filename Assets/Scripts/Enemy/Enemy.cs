@@ -25,11 +25,6 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        if (health <= 0)
-        {
-            Die();
-        }
     }
 
     public void Die()
@@ -47,6 +42,10 @@ public class Enemy : MonoBehaviour
                 knockbackdir = other.transform.position - transform.position;
                 enemyRB.AddForce(knockbackdir * 3f, ForceMode.Impulse);
                 health -= 25;
+                if (health <= 0)
+                {
+                    Die();
+                }
                 hitcooldown = false;
                 StartCoroutine(ResetMovement());
             }
@@ -56,6 +55,10 @@ public class Enemy : MonoBehaviour
                 knockbackdir = other.transform.position - transform.position;
                 enemyRB.AddForce(knockbackdir * 3f, ForceMode.Impulse);
                 health -= 25;
+                if (health <= 0)
+                {
+                    Die();
+                }
                 hitcooldown = false;
                 StartCoroutine(ResetMovement());
             }
