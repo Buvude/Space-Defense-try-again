@@ -7,13 +7,14 @@ public class enemyProjectile : MonoBehaviour
     public NMA Parent;
     public float speed;
     private Vector3 targetSpace;
-    public GameManager gameManager;
+    private GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
         print("spawned projectile");
         targetSpace = GameObject.FindGameObjectWithTag("Player").transform.position;
         transform.LookAt(targetSpace);
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
