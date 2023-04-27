@@ -137,11 +137,18 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        StartCoroutine(GameOverScreen());
+    }
+
+    IEnumerator GameOverScreen()
+    {
         isGameActive = false;
         gameOverText.gameObject.SetActive(true);
         healthText.gameObject.SetActive(false);
         oxygenText.gameObject.SetActive(false);
         timerText.gameObject.SetActive(false);
+        yield return new WaitForSeconds(1);
+
     }
 
     IEnumerator Timer()
