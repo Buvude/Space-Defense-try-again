@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1962286281628325234}
   m_Layer: 0
   m_Name: Spawn Manager
-  m_TagString: Untagged
+  m_TagString: Spawn Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,3 +48,4 @@ MonoBehaviour:
   enemy: {fileID: 3560461428540477023, guid: f6fb83726e65dd74ca807d98187596fe, type: 3}
   enemyCount: 0
   waveNumber: 1
+  gameManager: {fileID: 0}
