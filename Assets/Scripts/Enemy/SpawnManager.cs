@@ -42,7 +42,15 @@ public class SpawnManager : MonoBehaviour
     {
         while (true)
         {
-            enemyCount = FindObjectsOfType<Enemy>().Length;
+            GameObject[] tempEnemyList;
+            tempEnemyList = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach(GameObject e in tempEnemyList)
+            {
+                if (e.GetComponent<NMA>().CurrentState != NMA.EnemyState.Dead)
+                {
+                    numOfEnemiesLeft++;
+                }
+            }
             if (enemyCount == 0||gameManager.getSecondsLeft()<=0 && gameManager.isGameActive)
             {
                 waveNumber++;

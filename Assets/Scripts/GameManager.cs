@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public TextMeshProUGUI shipStatusText;
     public TowerDefenseScript towerDefense;
     public int health;
     public TextMeshProUGUI healthText;
@@ -35,9 +36,9 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         health = 100;
-        healthText.text = health + "%";
+        healthText.text = "Health:  "+health + "%";
         oxygen = 100.0f;
-        oxygenText.text = oxygen + "%";
+        oxygenText.text = "Oxygen: "+oxygen + "%";
         secondsToEnd = timeOfRound;
         isGamePaused = false;
         StartGame();//TODO DELETE THIS
@@ -61,7 +62,7 @@ public class GameManager : MonoBehaviour
         timerText.gameObject.SetActive(true);
         currencyText.gameObject.SetActive(true);
         StartCoroutine(Timer());
-        currencyText.text = towerDefense.scrap + " Scrap";
+        currencyText.text ="Scrap: " +towerDefense.scrap;
     }
 
     void OxygenDrain()
@@ -70,7 +71,7 @@ public class GameManager : MonoBehaviour
         {
 
             oxygen -= oxygenDrain * Time.deltaTime;
-            oxygenText.text = oxygen + "%";
+            oxygenText.text = "Oxygen: "+oxygen + "%";
 
 
             if (oxygen == 0)
@@ -83,7 +84,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateTimer()
     {
-        timerText.text = $"{secondsToEnd}";
+        timerText.text = "Time:\n"+getSecondsLeft();
     }
 
     // Update is called once per frame
@@ -112,6 +113,8 @@ public class GameManager : MonoBehaviour
         // can't pause in title and game over screen
         if (isGameActive)
         {
+            Cursor.lockState=CursorLockMode.Confined;
+            Cursor.visible = true;
             pauseScreen.gameObject.SetActive(true);
             Time.timeScale = 0;
             isGamePaused = true;
@@ -127,16 +130,19 @@ public class GameManager : MonoBehaviour
 
     public void ResumeGame()
     {
-       
-            pauseScreen.gameObject.SetActive(false);
-            Time.timeScale = 1f;
-            isGamePaused = false;
-            Debug.Log("Game will resume");
+        Cursor.visible = false;
+        Cursor.lockState=CursorLockMode.Locked;
+        pauseScreen.gameObject.SetActive(false);
+        Time.timeScale = 1f;
+        isGamePaused = false;
+        Debug.Log("Game will resume");
         
     }
 
     public void GameOver()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         isGameActive = false;
         gameOverText.gameObject.SetActive(true);
         healthText.gameObject.SetActive(false);
@@ -154,7 +160,7 @@ public class GameManager : MonoBehaviour
 
                 if (secondsToEnd == 0)
                 {
-                    isRoundActive = false;
+                    //isRoundActive = false;
                 }
 
                 yield return new WaitForSeconds(1);
@@ -169,6 +175,7 @@ public class GameManager : MonoBehaviour
     {
         if (isGameActive)
         {
+            shipStatusText.text = "Ship Status:\nThe Oxygen System has sprung a leak, please go to a repair panel to fix";
             StartCoroutine(BreakShip());
         }
     }
@@ -176,7 +183,7 @@ public class GameManager : MonoBehaviour
     public void UpdateHealth(int healthToChange)
     {
         health += healthToChange;
-        healthText.text = health + "%";
+        healthText.text = "Health:  "+health + "%";
         if (health == 0)
         {
             GameOver();
@@ -185,8 +192,9 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScrap()
     {
+        print("made it to update Scrap");
         towerDefense.scrap += enemy.scrapToChange;
-        currencyText.text = towerDefense.scrap + " Scrap";
+        currencyText.text = "Scrap:  "+towerDefense.scrap;
     }
 
     public IEnumerator BreakShip()
