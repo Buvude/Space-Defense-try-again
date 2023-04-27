@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56206f2f0d9cb2247b10c28c95104387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turret: {fileID: 8945723575108133741, guid: b802c8afb6bfda44ea9cc5c3186b382d, type: 3}
+  turret: {fileID: 5345678091728695580, guid: 8e0fa7ed202dde44e979296bd6a9a2ef, type: 3}
   mine: {fileID: 2997447770810061079, guid: 5e7ddbb1b9082cf45ba19c52f1d70a06, type: 3}
   scrap: 0
 --- !u!1 &1398409979091171455
