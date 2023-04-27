@@ -14,17 +14,17 @@ public class PlayerShoot : MonoBehaviour
     private Vector3 randomRotation;
 
     public bool canShoot = true;
-
+    private GameManager gameManagerScript;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManagerScript = GameObject.FindWithTag("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && canShoot)
+        if (Input.GetMouseButtonDown(0) && canShoot && gameManagerScript.isGameActive && !gameManagerScript.isGamePaused)
         {
             Shoot();
             canShoot = false;
