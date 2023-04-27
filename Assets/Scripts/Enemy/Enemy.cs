@@ -32,6 +32,7 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         isAlive = false;
+        this.GetComponent<NMA>().CurrentState = NMA.EnemyState.Dead;
         gameManager.UpdateScrap();
         spawner.enemyCount -= 1;
     }

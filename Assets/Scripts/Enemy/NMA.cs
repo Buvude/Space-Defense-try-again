@@ -36,7 +36,11 @@ public class NMA : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (enemyScript.health <= 0)
+        {
+            CurrentState = EnemyState.Dead;
+            StateSwitch();
+        }
     }
     public void UpdateTarget()
     {

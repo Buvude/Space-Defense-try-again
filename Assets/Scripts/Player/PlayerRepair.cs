@@ -29,6 +29,7 @@ public class PlayerRepair : MonoBehaviour
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
         {
             Debug.Log(hit.transform.name);
+            Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward);
 
             Panel panel = hit.transform.GetComponent<Panel>();
             if (panel != null)
