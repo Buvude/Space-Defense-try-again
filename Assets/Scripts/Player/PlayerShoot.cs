@@ -15,6 +15,8 @@ public class PlayerShoot : MonoBehaviour
 
     public bool canShoot = true;
     private GameManager gameManagerScript;
+    [SerializeField] private AudioSource shootSoundEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,7 @@ public class PlayerShoot : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && canShoot && gameManagerScript.isGameActive && !gameManagerScript.isGamePaused)
         {
+            shootSoundEffect.Play();
             Shoot();
             canShoot = false;
         }
