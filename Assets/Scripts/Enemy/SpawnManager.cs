@@ -42,17 +42,21 @@ public class SpawnManager : MonoBehaviour
     {
         while (true)
         {
+            int amountEnemyLeft=0;
             GameObject[] tempEnemyList;
             tempEnemyList = GameObject.FindGameObjectsWithTag("Enemy");
             foreach(GameObject e in tempEnemyList)
             {
                 if (e.GetComponent<NMA>().CurrentState != NMA.EnemyState.Dead)
                 {
-                    numOfEnemiesLeft++;
+                    amountEnemyLeft++;
                 }
             }
+            enemyCount = amountEnemyLeft;
+            //print(enemyCount);
             if (enemyCount == 0||gameManager.getSecondsLeft()<=0 && gameManager.isGameActive)
             {
+                gameManager.shipStatusText.text = "Ship Status:\n Enemies have breached!";
                 waveNumber++;
                 SpawnEnemyWave(numOfEnemies + waveNumber);
                 gameManager.resetRountTimer();

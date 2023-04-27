@@ -98,8 +98,10 @@ public class GameManager : MonoBehaviour
         {
             ResumeGame();
         }
-        if (breakState == 6)
+        if (breakState == 6&&!isShipDamaged)
         {
+            shipStatusText.text = "Ship Status:\nThe Oxygen System has sprung a leak";
+            StopCoroutine(BreakShip());
             isShipDamaged = true;
         }
         if (isShipDamaged)
@@ -175,7 +177,7 @@ public class GameManager : MonoBehaviour
     {
         if (isGameActive)
         {
-            shipStatusText.text = "Ship Status:\nThe Oxygen System has sprung a leak, please go to a repair panel to fix";
+            
             StartCoroutine(BreakShip());
         }
     }

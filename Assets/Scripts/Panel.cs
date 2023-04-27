@@ -21,6 +21,7 @@ public class Panel : MonoBehaviour
     {
         if (gameManager.isShipDamaged == true)
         {
+            gameManager.shipStatusText.text = "Ship Status:\n Ship has been repaired";
             gameManager.isShipDamaged = false;
             StartCoroutine(gameManager.BreakShip());
         }
