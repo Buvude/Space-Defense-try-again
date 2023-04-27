@@ -17,6 +17,7 @@ public class CameraScript : MonoBehaviour
 
     public float xRotation;
     public float yRotation;
+    private GameManager gameManagerScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,21 +25,26 @@ public class CameraScript : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        gameManagerScript = GameObject.FindWithTag("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        mouseX = Input.GetAxisRaw("Mouse X");
-        mouseY = Input.GetAxisRaw("Mouse Y");
+        if (gameManagerScript.isGameActive && !gameManagerScript.isGamePaused)
+        {
+            mouseX = Input.GetAxisRaw("Mouse X");
+            mouseY = Input.GetAxisRaw("Mouse Y");
 
-        yRotation += mouseX * sensitivityX * multiplier;
-        xRotation -= mouseY * sensitivityY * multiplier;
+            yRotation += mouseX * sensitivityX * multiplier;
+            xRotation -= mouseY * sensitivityY * multiplier;
 
-        camera.transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
+            camera.transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
 
-        transform.rotation = Quaternion.Euler(0, yRotation, 0);
+            transform.rotation = Quaternion.Euler(0, yRotation, 0);
 
-        xRotation = Mathf.Clamp(xRotation, -90, 90);
+            xRotation = Mathf.Clamp(xRotation, -90, 90);
+        }
+        
     }
 }
