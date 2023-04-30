@@ -8,7 +8,7 @@ public class Panel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -21,6 +21,7 @@ public class Panel : MonoBehaviour
     {
         if (gameManager.isShipDamaged == true)
         {
+            gameManager.shipStatusText.text = "Ship Status:\n Ship has been repaired";
             gameManager.isShipDamaged = false;
             StartCoroutine(gameManager.BreakShip());
         }
