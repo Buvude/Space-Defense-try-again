@@ -9,11 +9,15 @@ public class Enemy : MonoBehaviour
     public float health = 50;
     public bool hitcooldown = true;
     public bool isAlive = true;
-    public GameManager gameManager;
+    internal GameManager gameManager;
+    public int scrapToChange;
+    private SpawnManager spawner;
     // Start is called before the first frame update
     void Start()
     {
         enemyRB = GetComponent<Rigidbody>();
+        gameManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<GameManager>();
+        spawner = GameObject.FindGameObjectWithTag("Spawn Manager").GetComponent<SpawnManager>();
     }
 
     // Update is called once per frame
@@ -23,17 +27,14 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        if (health <= 0)
-        {
-            Die();
-        }
     }
 
     public void Die()
     {
         isAlive = false;
-        gameManager.UpdateScrap(5);
+        this.GetComponent<NMA>().CurrentState = NMA.EnemyState.Dead;
+        gameManager.UpdateScrap();
+        spawner.enemyCount -= 1;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -45,6 +46,10 @@ public class Enemy : MonoBehaviour
                 knockbackdir = other.transform.position - transform.position;
                 enemyRB.AddForce(knockbackdir * 3f, ForceMode.Impulse);
                 health -= 25;
+                if (health <= 0)
+                {
+                    Die();
+                }
                 hitcooldown = false;
                 StartCoroutine(ResetMovement());
             }
@@ -54,6 +59,10 @@ public class Enemy : MonoBehaviour
                 knockbackdir = other.transform.position - transform.position;
                 enemyRB.AddForce(knockbackdir * 3f, ForceMode.Impulse);
                 health -= 25;
+                if (health <= 0)
+                {
+                    Die();
+                }
                 hitcooldown = false;
                 StartCoroutine(ResetMovement());
             }
