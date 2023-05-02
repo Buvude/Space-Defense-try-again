@@ -21,6 +21,7 @@ public class MainMenuButton : MonoBehaviour
 
     public void MainMenu()
     {
+        Debug.Log("Return To Monkey!!!!!");
         SceneLoader.Load(SceneLoader.Scene.TitleScene);
     }
 }
