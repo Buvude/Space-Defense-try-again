@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public List<Animator> colorChangerTest=new List<Animator>();
     public TextMeshProUGUI shipStatusText;
     public TowerDefenseScript towerDefense;
     public int health;
@@ -90,6 +91,19 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //debug purposes only
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+           /* GameObject[] temp;
+            temp=GameObject.FindGameObjectsWithTag("Enemy");
+            print(temp.Length);*/
+
+            foreach (Animator tempGO in colorChangerTest)
+            {
+                tempGO.SetTrigger("damage");
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape)||Input.GetKeyDown(KeyCode.P) && !isGamePaused)
         {
             PauseGame();

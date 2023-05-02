@@ -13,6 +13,11 @@ public class EnemySpriteFacePlayer : MonoBehaviour
     public enum spriteState { idle, walking};
     public spriteState thisSpriteState;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        GameObject.FindGameObjectWithTag("Game Manager").GetComponent<GameManager>().colorChangerTest.Add(this.GetComponent<Animator>());
+    }
+
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").transform;
