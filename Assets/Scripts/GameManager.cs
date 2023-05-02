@@ -162,6 +162,8 @@ public class GameManager : MonoBehaviour
 
     IEnumerator GameOverScreen()
     {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
         isGameActive = false;
         gameOverText.gameObject.SetActive(true);
         healthText.gameObject.SetActive(false);
