@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 02405ddd784579643b40072a3dfc9055
+guid: 1465e26e0c3cf3e4bb90e321a93ce4a1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: doomgunsheet_0
+      name: gunrecharge_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 45
         y: 0
-        width: 62
-        height: 70
+        width: 39
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5638b4d71c55d9646b50eb5f77036a97
-      internalID: -22945751
+      spriteID: 726e6007ad0fe5b428d6e3ef80fcf6b4
+      internalID: 813038059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doomgunsheet_1
+      name: gunrecharge_1
       rect:
         serializedVersion: 2
-        x: 62
+        x: 173
         y: 0
-        width: 62
-        height: 70
+        width: 38
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9e8582c1d212c841b1e130e476421bb
-      internalID: -496036847
+      spriteID: 75dc243f13f7ba746918a4afe829d58c
+      internalID: -1109327558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doomgunsheet_2
+      name: gunrecharge_2
       rect:
         serializedVersion: 2
-        x: 124
+        x: 301
         y: 0
-        width: 62
-        height: 70
+        width: 38
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71a239ae37c77a64c94ef915b379d9ee
-      internalID: -1019014865
+      spriteID: 5517d1ecfbfdee249b3698c4014fdb70
+      internalID: -534873357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doomgunsheet_3
+      name: gunrecharge_3
       rect:
         serializedVersion: 2
-        x: 186
+        x: 429
         y: 0
-        width: 62
-        height: 70
+        width: 38
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07aa42317a53c9a4cab7976ec200aa76
-      internalID: -1588502281
+      spriteID: 061de6516e3d9f8499796ce9561e4fda
+      internalID: 1985949710
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doomgunsheet_4
+      name: gunrecharge_4
       rect:
         serializedVersion: 2
-        x: 248
+        x: 556
         y: 0
-        width: 62
-        height: 70
+        width: 40
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc16ceb125811be4bb9437511c1eccbf
-      internalID: 1865526811
+      spriteID: 5bf5f456554d72848ab40eef247e2e91
+      internalID: -534915250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doomgunsheet_5
+      name: gunrecharge_5
       rect:
         serializedVersion: 2
-        x: 310
+        x: 686
         y: 0
-        width: 62
-        height: 70
+        width: 38
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3202a886d2e817041a8c125be59335bd
-      internalID: -1469002951
+      spriteID: 68f92b4b4866e7748a7fcf5bb5bfb639
+      internalID: 139770425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doomgunsheet_6
+      name: gunrecharge_6
       rect:
         serializedVersion: 2
-        x: 372
+        x: 814
         y: 0
-        width: 62
-        height: 70
+        width: 38
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e31187f2c102c14da167748755976e0
-      internalID: 1954246310
+      spriteID: e4edefd2318ffab4692d1a15be37ba3c
+      internalID: -1911746272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doomgunsheet_7
+      name: gunrecharge_7
       rect:
         serializedVersion: 2
-        x: 434
+        x: 942
         y: 0
-        width: 62
-        height: 70
+        width: 38
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,20 +313,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d50384088f2afa40a8d090d21f81f04
-      internalID: 576335966
+      spriteID: e6074aa2237bc8449848d5f7af702ebc
+      internalID: -643368381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doomgunsheet_8
+      name: gunrecharge_8
       rect:
         serializedVersion: 2
-        x: 496
+        x: 1069
         y: 0
-        width: 62
-        height: 70
+        width: 40
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,20 +334,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0743c1f57a409bf41ab787fb7aed2771
-      internalID: -627962843
+      spriteID: 934cea1816e4e7c4ba028c53fd13093d
+      internalID: 1772603212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doomgunsheet_9
+      name: gunrecharge_9
       rect:
         serializedVersion: 2
-        x: 558
+        x: 1198
         y: 0
-        width: 62
-        height: 70
+        width: 39
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,20 +355,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc2fd75268a21354392d5861a07854ee
-      internalID: 1181709063
+      spriteID: b89ace5471a7c354cadf84ae3aaa3ebe
+      internalID: 1831643559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doomgunsheet_10
+      name: gunrecharge_10
       rect:
         serializedVersion: 2
-        x: 620
+        x: 1326
         y: 0
-        width: 62
-        height: 70
+        width: 38
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -376,8 +376,176 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20147d0206813ca45ad5ca80cdbdeff3
-      internalID: 763009527
+      spriteID: 512dbadda0fb15c4e863c628a5ffb09a
+      internalID: 458018887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gunrecharge_11
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 0
+        width: 38
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 283e8186b9188d44a8371364c2af1b84
+      internalID: 154823159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gunrecharge_12
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 0
+        width: 39
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02e4ddb11f3e7a448390e921c0fc8d6
+      internalID: 234791131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gunrecharge_13
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 0
+        width: 40
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4c3c648b4393f448b226f9b487c051
+      internalID: 596222612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gunrecharge_14
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 0
+        width: 39
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f32276e8f43a54db94145fd75dd46d
+      internalID: 1245891441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gunrecharge_15
+      rect:
+        serializedVersion: 2
+        x: 1966
+        y: 0
+        width: 38
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af540ca4729a0744db175624903f2999
+      internalID: -1228561227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gunrecharge_16
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 0
+        width: 38
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f2b5c51910d50e4dad6158ebd99e8c6
+      internalID: -2004267328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gunrecharge_17
+      rect:
+        serializedVersion: 2
+        x: 2221
+        y: 0
+        width: 38
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a9eab62dd64494a9224f77a3619f29
+      internalID: -1727612383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gunrecharge_18
+      rect:
+        serializedVersion: 2
+        x: 2348
+        y: 0
+        width: 39
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce34b04bc6b10f478b16e24527270fc
+      internalID: -1962959719
       vertices: []
       indices: 
       edges: []
@@ -385,7 +553,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 66de79dada20d454ba2fb7d6f7244b75
+    spriteID: e00523d90d9de1d44b6196a145c1f9af
     internalID: 0
     vertices: []
     indices: 
@@ -393,17 +561,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      doomgunsheet_10: 763009527
-      doomgunsheet_5: -1469002951
-      doomgunsheet_6: 1954246310
-      doomgunsheet_0: -22945751
-      doomgunsheet_1: -496036847
-      doomgunsheet_3: -1588502281
-      doomgunsheet_2: -1019014865
-      doomgunsheet_4: 1865526811
-      doomgunsheet_9: 1181709063
-      doomgunsheet_8: -627962843
-      doomgunsheet_7: 576335966
+      gunrecharge_2: -534873357
+      gunrecharge_5: 139770425
+      gunrecharge_7: -643368381
+      gunrecharge_10: 458018887
+      gunrecharge_15: -1228561227
+      gunrecharge_18: -1962959719
+      gunrecharge_6: -1911746272
+      gunrecharge_12: 234791131
+      gunrecharge_13: 596222612
+      gunrecharge_14: 1245891441
+      gunrecharge_0: 813038059
+      gunrecharge_3: 1985949710
+      gunrecharge_17: -1727612383
+      gunrecharge_8: 1772603212
+      gunrecharge_9: 1831643559
+      gunrecharge_11: 154823159
+      gunrecharge_1: -1109327558
+      gunrecharge_16: -2004267328
+      gunrecharge_4: -534915250
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
