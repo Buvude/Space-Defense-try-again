@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 285881536809220486}
   - component: {fileID: 9203051315831962980}
   - component: {fileID: 3565224262325780987}
+  - component: {fileID: 955285864645854965}
   m_Layer: 0
   m_Name: sprite holder
   m_TagString: Untagged
@@ -105,6 +106,26 @@ MonoBehaviour:
   awayFacing: {fileID: 21300000, guid: 7ca45df4908ec0748948c031869bcedd, type: 3}
   Player: {fileID: 0}
   thisSpriteState: 0
+--- !u!95 &955285864645854965
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691710919938830132}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c86e43009c417a4da7dad6ff8e416dd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3560461428540477023
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +286,6 @@ MonoBehaviour:
   health: 50
   hitcooldown: 1
   isAlive: 1
-  gameManager: {fileID: 0}
   scrapToChange: 50
 --- !u!195 &5896782968322408425
 NavMeshAgent:

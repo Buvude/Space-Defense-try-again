@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scenes/OldSave/LevelOneGreybox/NavMesh.asset.meta
 <<<<<<<< HEAD:Assets/Prefabs/Particle Effects.meta
 guid: 25355fcd27fe0fa45ad3506cbf50e6bf
 folderAsset: yes
@@ -10,6 +11,12 @@ NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 23800000
 >>>>>>>> main:Assets/Scenes/OldSave/LevelOneGreybox/NavMesh.asset.meta
+=======
+guid: 48fdf062a2c618a489a1ec3884a1b327
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+>>>>>>> main:Assets/Scenes/DevTestRoom/NavMesh.asset.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 
