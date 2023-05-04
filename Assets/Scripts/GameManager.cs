@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
         isGamePaused = false;
         StartGame();//TODO DELETE THIS
         ShipStatus();
+        ResumeGame();
     }
 
     public void resetRountTimer()
@@ -75,7 +76,7 @@ public class GameManager : MonoBehaviour
             oxygenText.text = "Oxygen: "+oxygen + "%";
 
 
-            if (oxygen == 0)
+            if (oxygen <= 0)
             {
                 GameOver();
             }
