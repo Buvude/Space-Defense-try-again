@@ -26,7 +26,7 @@ public class EnemySpriteFacePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 tempV3 = new Vector3(Player.position.x, 0f, Player.position.z);
+        Vector3 tempV3 = new Vector3(Player.position.x, Player.position.y, Player.position.z);
         Vector3 directionToPlayer = ParentObject.transform.position - Player.position;
         transform.LookAt(tempV3);
         float angleToPlayer;

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public List<Panel> panelsInScene = new List<Panel>();
     public List<Animator> colorChangerTest=new List<Animator>();
     public TextMeshProUGUI shipStatusText;
     public TowerDefenseScript towerDefense;
@@ -115,7 +116,7 @@ public class GameManager : MonoBehaviour
         }
         if (breakState == 6&&!isShipDamaged)
         {
-            shipStatusText.text = "Ship Status:\nThe Oxygen System has sprung a leak";
+            shipStatusText.text = "Ship Status:\nThe Oxygen System has sprung a leak\n Press 'e' while looking at the red panel to repair";
             StopCoroutine(BreakShip());
             isShipDamaged = true;
         }
@@ -227,7 +228,13 @@ public class GameManager : MonoBehaviour
         while (!isShipDamaged)
         {
             breakState = Random.Range(breakStateMin, breakStateMax);
+            if (breakState == 6)
+            {
+                break;
+            }
             yield return new WaitForSeconds(checkBetween);
         }
+        //print(panelsInScene.Count);
+        panelsInScene[Random.Range(0, panelsInScene.Count)].broken = true;
     }
 }
