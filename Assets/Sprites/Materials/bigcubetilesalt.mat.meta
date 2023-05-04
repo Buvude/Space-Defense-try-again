@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/Materials/bigcubetilesalt.mat.meta
+guid: abb354b291cfaad478f6cbf1b4695084
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+========
+guid: be939388c3ac068479c235056ad7373a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+>>>>>>>> main:Assets/Sprites/Gun/Shot.anim.meta
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

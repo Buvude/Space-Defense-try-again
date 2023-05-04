@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/Materials/KeyBoard.mat.meta
+guid: dce990d2705d82740b2847e42b069edd
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+========
+guid: 48fdf062a2c618a489a1ec3884a1b327
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+>>>>>>>> main:Assets/Scenes/DevTestRoom/NavMesh.asset.meta
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
