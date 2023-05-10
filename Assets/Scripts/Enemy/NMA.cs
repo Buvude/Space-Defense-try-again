@@ -16,6 +16,12 @@ public class NMA : MonoBehaviour
     private NavMeshAgent agent;
     public EnemyState CurrentState;
     private Enemy enemyScript;
+
+    public AudioSource enemyShootSound;
+    public AudioSource enemyHitSound;
+    public AudioSource enemyDeathSound;
+
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -25,7 +31,10 @@ public class NMA : MonoBehaviour
         enemyScript = GetComponent<Enemy>();
     }
     void Start()
-    { 
+    {
+        enemyShootSound.clip = Resources.Load<AudioClip>("enemy_fire");
+        enemyHitSound.clip = Resources.Load<AudioClip>("shot");
+        enemyDeathSound.clip = Resources.Load<AudioClip>("enemy_death");
         //TEMPORARY TEST FOR NAVMESH
         //make it so the spawn point is instatnly a "home" so that they don't search when spawned in
 
@@ -38,6 +47,7 @@ public class NMA : MonoBehaviour
     {
         if (enemyScript.health <= 0)
         {
+            enemyDeathSound.Play();
             CurrentState = EnemyState.Dead;
             StateSwitch();
         }
@@ -131,6 +141,7 @@ public class NMA : MonoBehaviour
                 rotationForAttack.z = transform.rotation.z;
                 if (enemyScript.isAlive == true)
                 {
+                    enemyShootSound.Play();
                     Instantiate(Fireball, transform.position, transform.rotation);
                 }
                 yield return new WaitForSeconds(enemyFireCooldown);
@@ -166,7 +177,7 @@ public class NMA : MonoBehaviour
     }
     public void OnPlayerAttack()
     {
-
+        enemyHitSound.Play();
     }
 
         //for searching play ~5 second animation of searching, then change state to patrolling (after setting new goal point)
