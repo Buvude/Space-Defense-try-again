@@ -66,3 +66,8 @@ UserSettings/EditorUserSettings.asset
 UserSettings/Layouts/default-2021.dwlt
 UserSettings/Layouts/default-2021.dwlt
 *.dwlt
+Assets/Scenes/DevTestRoom/NavMesh.asset.meta
+Assets/Prefabs/Repair Station Mat1.mat.meta
+Assets/ProBuilder Data/Default Material Palette.asset.meta
+Assets/Scripts/GameManager.cs
+Assets/Scripts/Panel.cs
