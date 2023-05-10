@@ -8,6 +8,7 @@ public static class SceneLoader
     public enum Scene
     {
         TitleScene,
+        LevelOneGreybox,
     }
     public static void Load(Scene scene)
     {

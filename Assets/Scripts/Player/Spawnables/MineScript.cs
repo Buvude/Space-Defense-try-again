@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class MineScript : MonoBehaviour
 {
-    
+    [SerializeField] private AudioSource exSoundEffect;
+    [SerializeField] ParticleSystem exParticle = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,8 @@ public class MineScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+            exSoundEffect.Play();
+            exParticle.Play();
             Destroy(gameObject);
         }
     }
