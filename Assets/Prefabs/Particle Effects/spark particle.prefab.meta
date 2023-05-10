@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/Particle Effects/spark particle.prefab.meta
+guid: 9b3eae16f0b934c43b905dc7dd1ae082
+PrefabImporter:
+  externalObjects: {}
+========
+guid: be939388c3ac068479c235056ad7373a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+>>>>>>>> main:Assets/Sprites/Gun/Shot.anim.meta
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
