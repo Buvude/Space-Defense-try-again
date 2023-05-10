@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public List<Panel> panelsInScene = new List<Panel>();
-    public List<Animator> colorChangerTest=new List<Animator>();
+    public List<Animator> colorChangerTest = new List<Animator>();
     public TextMeshProUGUI shipStatusText;
     public TowerDefenseScript towerDefense;
     public int health;
@@ -38,9 +38,9 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         health = 100;
-        healthText.text = "Health:  "+health + "%";
+        healthText.text = "Health:  " + health + "%";
         oxygen = 100.0f;
-        oxygenText.text = "Oxygen: "+oxygen + "%";
+        oxygenText.text = "Oxygen: " + oxygen + "%";
         secondsToEnd = timeOfRound;
         isGamePaused = false;
         StartGame();//TODO DELETE THIS
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
         timerText.gameObject.SetActive(true);
         currencyText.gameObject.SetActive(true);
         StartCoroutine(Timer());
-        currencyText.text ="Scrap: " +towerDefense.scrap;
+        currencyText.text = "Scrap: " + towerDefense.scrap;
     }
 
     void OxygenDrain()
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
         {
 
             oxygen -= oxygenDrain * Time.deltaTime;
-            oxygenText.text = "Oxygen: "+oxygen + "%";
+            oxygenText.text = "Oxygen: " + oxygen + "%";
 
 
             if (oxygen <= 0)
@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateTimer()
     {
-        timerText.text = "Time:\n"+getSecondsLeft();
+        timerText.text = "Time:\n" + getSecondsLeft();
     }
 
     // Update is called once per frame
@@ -96,9 +96,9 @@ public class GameManager : MonoBehaviour
         //debug purposes only
         if (Input.GetKeyDown(KeyCode.H))
         {
-           /* GameObject[] temp;
-            temp=GameObject.FindGameObjectsWithTag("Enemy");
-            print(temp.Length);*/
+            /* GameObject[] temp;
+             temp=GameObject.FindGameObjectsWithTag("Enemy");
+             print(temp.Length);*/
 
             foreach (Animator tempGO in colorChangerTest)
             {
@@ -106,7 +106,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape)||Input.GetKeyDown(KeyCode.P) && !isGamePaused)
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P) && !isGamePaused)
         {
             PauseGame();
         }
@@ -114,7 +114,7 @@ public class GameManager : MonoBehaviour
         {
             ResumeGame();
         }
-        if (breakState == 6&&!isShipDamaged)
+        if (breakState == 6 && !isShipDamaged)
         {
             shipStatusText.text = "Ship Status:\nThe Oxygen System has sprung a leak\n Press 'e' while looking at the red panel to repair";
             StopCoroutine(BreakShip());
@@ -131,14 +131,14 @@ public class GameManager : MonoBehaviour
         // can't pause in title and game over screen
         if (isGameActive)
         {
-            Cursor.lockState=CursorLockMode.Confined;
+            Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
             pauseScreen.gameObject.SetActive(true);
             Time.timeScale = 0;
             isGamePaused = true;
             Debug.Log("Game is paused.");
         }
-        
+
     }
 
     public void RestartGame()
@@ -149,12 +149,12 @@ public class GameManager : MonoBehaviour
     public void ResumeGame()
     {
         Cursor.visible = false;
-        Cursor.lockState=CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
         pauseScreen.gameObject.SetActive(false);
         Time.timeScale = 1f;
         isGamePaused = false;
         Debug.Log("Game will resume");
-        
+
     }
 
     public void GameOver()
@@ -200,7 +200,7 @@ public class GameManager : MonoBehaviour
     {
         if (isGameActive)
         {
-            
+
             StartCoroutine(BreakShip());
         }
     }
@@ -208,7 +208,7 @@ public class GameManager : MonoBehaviour
     public void UpdateHealth(int healthToChange)
     {
         health += healthToChange;
-        healthText.text = "Health:  "+health + "%";
+        healthText.text = "Health:  " + health + "%";
         if (health == 0)
         {
             GameOver();
@@ -219,7 +219,7 @@ public class GameManager : MonoBehaviour
     {
         print("made it to update Scrap");
         towerDefense.scrap += enemy.scrapToChange;
-        currencyText.text = "Scrap:  "+towerDefense.scrap;
+        currencyText.text = "Scrap:  " + towerDefense.scrap;
     }
 
     public IEnumerator BreakShip()
