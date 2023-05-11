@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemySpriteFacePlayer : MonoBehaviour
 {
-    
+    public List<Animator> AnimationManagers = new List<Animator>(); 
     public GameObject ParentObject;
-    public SpriteRenderer sR;
-    public Sprite frontFacing, leftFacing, rightFacing, awayFacing; 
+    //public SpriteRenderer sR;
+    public SpriteRenderer frontFacing, leftFacing, rightFacing, awayFacing; 
     public Transform Player;
     public enum SpriteFacingDirection {Forward, Left, Right, Back };//made for sprite animation/implimentation to make it easier. 
     public enum spriteState { idle, walking };//what animation should be playing
@@ -32,15 +32,11 @@ public class EnemySpriteFacePlayer : MonoBehaviour
         transform.LookAt(tempV3);
         float angleToPlayer;
         angleToPlayer = Vector3.SignedAngle(ParentObject.transform.forward, directionToPlayer, Vector3.up);
-        /*if (angleToPlayer > 360f)
-        {
-            print("Angle to hight");
-        }
-        else*/ if (angleToPlayer < 45f && angleToPlayer > -45f)
+        if (angleToPlayer < 45f && angleToPlayer > -45f)//determining with sprite renderer to have active
         {
             //print("Front Facing Sprite");
             //sR.sprite = frontFacing;
-            CurrentDirection = SpriteFacingDirection.Forward;
+            CurrentDirection = SpriteFacingDirection.Back;
         }
         else if (angleToPlayer < 135f&&angleToPlayer>45f)
         {
@@ -52,7 +48,7 @@ public class EnemySpriteFacePlayer : MonoBehaviour
         {
             //print("Back Facing Sprite");
             //sR.sprite = awayFacing;
-            CurrentDirection = SpriteFacingDirection.Back;
+            CurrentDirection = SpriteFacingDirection.Forward;
         }
         else if (angleToPlayer >-135f)
         {
@@ -60,27 +56,40 @@ public class EnemySpriteFacePlayer : MonoBehaviour
             //sR.sprite = leftFacing;
             CurrentDirection = SpriteFacingDirection.Left;
         }
+        switch (CurrentDirection)
+        {
+            case SpriteFacingDirection.Forward:
+                frontFacing.enabled = true;
+                awayFacing.enabled = false;
+                rightFacing.enabled = false;
+                leftFacing.enabled = false;
+                break;
+            case SpriteFacingDirection.Left:
+                frontFacing.enabled = false;
+                awayFacing.enabled = false;
+                rightFacing.enabled = false;
+                leftFacing.enabled = true;
+                break;
+            case SpriteFacingDirection.Right:
+                frontFacing.enabled = false;
+                awayFacing.enabled = false;
+                rightFacing.enabled = true;
+                leftFacing.enabled = false;
+                break;
+            case SpriteFacingDirection.Back:
+                frontFacing.enabled = false;
+                awayFacing.enabled = true;
+                rightFacing.enabled = false;
+                leftFacing.enabled = false;
+                break;
+            default:
+                break;
+        }
         //print(angleToPlayer.ToString());
-        switch (thisSpriteState)
+        switch (thisSpriteState)//activating the correct spriete renderer
         {
             case spriteState.idle:
-                switch (CurrentDirection)
-                {
-                    case SpriteFacingDirection.Forward:
-                        sR.sprite = frontFacing;
-                        break;
-                    case SpriteFacingDirection.Left:
-                        sR.sprite = leftFacing;
-                        break;
-                    case SpriteFacingDirection.Right:
-                        sR.sprite = rightFacing;
-                        break;
-                    case SpriteFacingDirection.Back:
-                        sR.sprite = awayFacing;
-                        break;
-                    default:
-                        break;
-                }
+               
                 break;
             case spriteState.walking:
                 switch (CurrentDirection)
