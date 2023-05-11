@@ -164,6 +164,11 @@ public class GameManager : MonoBehaviour
 
     IEnumerator GameOverScreen()
     {
+        // this stops the background music (hopefully lol)
+        GameObject bgMusic = GameObject.Find("BackgroundMusic");
+        AudioSource bgMusicSource = bgMusic.GetComponent<AudioSource>();
+        bgMusicSource.Stop();
+
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         isGameActive = false;
