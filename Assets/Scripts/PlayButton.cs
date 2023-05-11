@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayButton : MonoBehaviour
 {
@@ -18,6 +19,6 @@ public class PlayButton : MonoBehaviour
     public void Play()
     {
         Debug.Log("Play Game!!!!!");
-        SceneLoader.Load(SceneLoader.Scene.LevelOneGreybox);
+        SceneManager.LoadScene(1);
     }
 }

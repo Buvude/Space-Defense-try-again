@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 84df3f68902c9554d899744f1daeb2f7
+guid: 1acdc605e6a4da24283f7795f018c5c6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walk_back_0
+      name: walk_front-export_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1
-        width: 49
-        height: 112
+        x: 19
+        y: 9
+        width: 482
+        height: 1122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fbbab22bf6ea9448bf8f8ba7e8736ab
-      internalID: -1236286874
+      spriteID: 37005955d9164414e8c920071d687893
+      internalID: 80330381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_back_1
+      name: walk_front-export_1
       rect:
         serializedVersion: 2
-        x: 54
-        y: 1
-        width: 49
-        height: 113
+        x: 539
+        y: 19
+        width: 482
+        height: 1112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c840e2792793a043a5cce9671ace1e2
-      internalID: 89379905
+      spriteID: 481366f31c278a5439319ad621ba4373
+      internalID: 798093928
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_back_2
+      name: walk_front-export_2
       rect:
         serializedVersion: 2
-        x: 106
-        y: 1
-        width: 49
-        height: 112
+        x: 1059
+        y: 9
+        width: 482
+        height: 1122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eeb591f943b89a943b8ce231f8e2d43b
-      internalID: 516981370
+      spriteID: e99240b18eceffb459f1342bc92791c3
+      internalID: 701053371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_back_3
+      name: walk_front-export_3
       rect:
         serializedVersion: 2
-        x: 158
-        y: 1
-        width: 49
-        height: 111
+        x: 1579
+        y: 19
+        width: 482
+        height: 1112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2eacc6936bb43b24895665dd4eb38388
-      internalID: -798974448
+      spriteID: c1050c5045278c241b1d99bc9f09ec04
+      internalID: -1431919572
       vertices: []
       indices: 
       edges: []
@@ -238,7 +238,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 19ae5c020883cbe42b7382168ebe9f74
+    spriteID: 1abb46e654594f14e90d1f8571662c08
     internalID: 0
     vertices: []
     indices: 
@@ -246,10 +246,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      walk_back_0: -1236286874
-      walk_back_1: 89379905
-      walk_back_2: 516981370
-      walk_back_3: -798974448
+      walk_front-export_2: 701053371
+      walk_front-export_0: 80330381
+      walk_front-export_1: 798093928
+      walk_front-export_3: -1431919572
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
