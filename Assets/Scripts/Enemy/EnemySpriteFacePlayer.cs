@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class EnemySpriteFacePlayer : MonoBehaviour
 {
+    
     public GameObject ParentObject;
     public SpriteRenderer sR;
     public Sprite frontFacing, leftFacing, rightFacing, awayFacing; 
     public Transform Player;
     public enum SpriteFacingDirection {Forward, Left, Right, Back };//made for sprite animation/implimentation to make it easier. 
+    public enum spriteState { idle, walking };//what animation should be playing
     SpriteFacingDirection CurrentDirection;
-    public enum spriteState { idle, walking};
     public spriteState thisSpriteState;
     // Start is called before the first frame update
     private void Awake()
@@ -82,6 +83,19 @@ public class EnemySpriteFacePlayer : MonoBehaviour
                 }
                 break;
             case spriteState.walking:
+                switch (CurrentDirection)
+                {
+                    case SpriteFacingDirection.Forward:
+                        break;
+                    case SpriteFacingDirection.Left:
+                        break;
+                    case SpriteFacingDirection.Right:
+                        break;
+                    case SpriteFacingDirection.Back:
+                        break;
+                    default:
+                        break;
+                }
                 break;
             default:
                 break;
