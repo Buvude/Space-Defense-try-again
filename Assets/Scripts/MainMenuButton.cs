@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainMenuButton : MonoBehaviour
 {
@@ -22,6 +23,6 @@ public class MainMenuButton : MonoBehaviour
     public void MainMenu()
     {
         Debug.Log("Return To Monkey!!!!!");
-        SceneLoader.Load(SceneLoader.Scene.TitleScene);
+        SceneManager.LoadScene(0);
     }
 }
