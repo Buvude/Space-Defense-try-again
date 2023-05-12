@@ -120,4 +120,12 @@ public class EnemySpriteFacePlayer : MonoBehaviour
                 break;
         }
     }
+
+    public void triggerHurtAnimtion()
+    {
+        foreach(Animator ani in AnimationManagers)
+        {
+            ani.SetTrigger("damage");
+        }
+    }
 }
