@@ -31,6 +31,7 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
+        Destroy(gameObject);
         isAlive = false;
         this.GetComponent<NMA>().CurrentState = NMA.EnemyState.Dead;
         gameManager.UpdateScrap();

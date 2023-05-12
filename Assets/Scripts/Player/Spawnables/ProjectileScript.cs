@@ -14,7 +14,7 @@ public class ProjectileScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        projectileRB.velocity = transform.forward * 50;
+        projectileRB.velocity = transform.forward * 80;
     }
 
     private void OnCollisionEnter(Collision other)

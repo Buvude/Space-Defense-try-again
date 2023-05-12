@@ -6,7 +6,9 @@ public class TowerDefenseScript : MonoBehaviour
 {
     public GameObject turret;
     public GameObject mine;
+    public Transform spawnLocation;
     public float scrap;
+    Vector3 rotation;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,8 @@ public class TowerDefenseScript : MonoBehaviour
     {
         if (scrap >= 50 && Input.GetKeyDown(KeyCode.T))
         {
-            Instantiate(turret, transform.position, transform.rotation);
+            rotation = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y-90, transform.eulerAngles.z);
+            Instantiate(turret, spawnLocation.position, Quaternion.Euler(rotation));
             scrap -= 50;
         }
         else if (scrap >= 25 && Input.GetKeyDown(KeyCode.G))

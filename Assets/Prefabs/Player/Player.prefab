@@ -208,7 +208,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215963434230160607}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -343,6 +343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turret: {fileID: 5345678091728695580, guid: 8e0fa7ed202dde44e979296bd6a9a2ef, type: 3}
   mine: {fileID: 2997447770810061079, guid: 5e7ddbb1b9082cf45ba19c52f1d70a06, type: 3}
+  spawnLocation: {fileID: 1906677110244789149}
   scrap: 0
 --- !u!82 &6824009725448135595
 AudioSource:
