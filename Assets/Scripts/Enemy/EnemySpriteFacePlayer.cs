@@ -89,21 +89,31 @@ public class EnemySpriteFacePlayer : MonoBehaviour
         switch (thisSpriteState)//activating the correct spriete renderer
         {
             case spriteState.idle:
-               
+                {
+                    foreach (Animator ani in AnimationManagers)
+                    {
+                        if (!ani.GetBool("Idle"))
+                        {
+                            ani.SetTrigger("IdleTrigger");
+                            ani.SetBool("Walking", false);
+                            ani.SetBool("Idle", true);
+                        }
+                        
+                    }
+                }
                 break;
             case spriteState.walking:
-                switch (CurrentDirection)
                 {
-                    case SpriteFacingDirection.Forward:
-                        break;
-                    case SpriteFacingDirection.Left:
-                        break;
-                    case SpriteFacingDirection.Right:
-                        break;
-                    case SpriteFacingDirection.Back:
-                        break;
-                    default:
-                        break;
+                    foreach (Animator ani in AnimationManagers)
+                    {
+                        if (!ani.GetBool("Walking"))
+                        {
+                            ani.SetTrigger("WalkingTrigger");
+                            ani.SetBool("Walking", true);
+                            ani.SetBool("Idle", false);
+                        }
+                        
+                    }
                 }
                 break;
             default:

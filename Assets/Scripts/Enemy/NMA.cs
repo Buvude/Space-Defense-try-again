@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class NMA : MonoBehaviour
 {
+    public EnemySpriteFacePlayer eSFP;
     public int enemyFireCooldown;
     public GameObject Fireball;
     public EnemyLineOfSightTest eLOS;
@@ -25,6 +26,7 @@ public class NMA : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+        eSFP = GetComponentInChildren<EnemySpriteFacePlayer>();
         agent = this.gameObject.GetComponent<NavMeshAgent>();
         agent.speed = NMAspeed;
         CurrentTarget = new Vector3();
@@ -87,21 +89,24 @@ public class NMA : MonoBehaviour
     {
         switch (CurrentState)
         {
-            case EnemyState.Searching:
+            case EnemyState.Searching://stationary spinning
                 {
+                    eSFP.thisSpriteState = EnemySpriteFacePlayer.spriteState.idle;
                     agent.speed = 0;
                     /*CurrentState = EnemyState.Paused;*/
                     ani.SetTrigger("SearchingTime");
                     break;
                 }
-            case EnemyState.Patrolling:
+            case EnemyState.Patrolling://walking a path
                 {
+                    eSFP.thisSpriteState = EnemySpriteFacePlayer.spriteState.walking;
                     /*UpdateTarget();*/
                     agent.speed = NMAspeed;
                     break;
                 }
-            case EnemyState.Chasing:
+            case EnemyState.Chasing://running after the player
                 {
+                    eSFP.thisSpriteState = EnemySpriteFacePlayer.spriteState.walking;
                     agent.speed = NMAspeed;
                     StopCoroutine(TimeToShoot());
                     StartCoroutine(TimeToChase());
@@ -110,8 +115,9 @@ public class NMA : MonoBehaviour
                     break;
                 }
                 
-            case EnemyState.Attacking:
+            case EnemyState.Attacking://stationary attacking
                 {
+                    eSFP.thisSpriteState = EnemySpriteFacePlayer.spriteState.idle;
                     agent.speed = 0;
                     StopCoroutine(TimeToChase());
                     StartCoroutine(TimeToShoot());
@@ -119,7 +125,8 @@ public class NMA : MonoBehaviour
                     break;
                 }
                 
-            case EnemyState.Dead:
+            case EnemyState.Dead://stationary little to no animation
+                eSFP.thisSpriteState = EnemySpriteFacePlayer.spriteState.idle;
                 agent.speed = 0;
                 //destroy enemy and such.
                 break;
