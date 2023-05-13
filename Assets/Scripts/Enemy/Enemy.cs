@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour
                 StartCoroutine(ResetMovement());
             }
 
-            if (other.tag == "Mine" && hitcooldown)
+            if (other.gameObject.CompareTag("Mine") && hitcooldown)
             {
                 knockbackdir = other.transform.position - transform.position;
                 enemyRB.AddForce(knockbackdir * 3f, ForceMode.Impulse);
