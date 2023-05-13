@@ -25,8 +25,8 @@ public class MineScript : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Tactical Nuke!!!! INCOMMING!!!!");
-            exSoundEffect.PlayOneShot(explosionSound, 1.0f);
             exParticle.Play();
+            exSoundEffect.PlayOneShot(explosionSound, 1.0f);
             Destroy(gameObject);
         }
     }
