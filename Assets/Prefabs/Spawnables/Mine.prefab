@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 2627374609582117342}
   - component: {fileID: 1242252813398314096}
   - component: {fileID: -969027549667516250}
-  - component: {fileID: -2372973719731617557}
   - component: {fileID: 5327488745789816966}
+  - component: {fileID: 8566683814268356081}
   m_Layer: 0
   m_Name: Mine
   m_TagString: Mine
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d632f8b489b1f440b49efc396ed2716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exSoundEffect: {fileID: 0}
+  explosionSound: {fileID: 8300000, guid: 4e1cbf93f2e06b74f817c259abbc92c6, type: 3}
   exParticle: {fileID: 3025671025732149210}
 --- !u!23 &3646641730562323896
 MeshRenderer:
@@ -134,20 +134,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &-2372973719731617557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2997447770810061079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d632f8b489b1f440b49efc396ed2716, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  exSoundEffect: {fileID: 0}
-  exParticle: {fileID: 3025671025732149210}
 --- !u!82 &5327488745789816966
 AudioSource:
   m_ObjectHideFlags: 0
@@ -169,7 +155,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 28.85322
-  MaxDistance: 500
+  MaxDistance: 28007.688
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -244,6 +230,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &8566683814268356081
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2997447770810061079}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.6904325, y: 1.7464865, z: 4.7844515}
+  m_Center: {x: 0.99557495, y: 0.37324327, z: 1.0579786}
 --- !u!1 &3584912829757104761
 GameObject:
   m_ObjectHideFlags: 0
