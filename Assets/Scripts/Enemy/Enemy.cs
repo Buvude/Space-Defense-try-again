@@ -12,9 +12,11 @@ public class Enemy : MonoBehaviour
     internal GameManager gameManager;
     public int scrapToChange;
     private SpawnManager spawner;
+    public EnemySpriteFacePlayer animationscript; 
     // Start is called before the first frame update
     void Start()
     {
+        animationscript = GetComponent<EnemySpriteFacePlayer>();
         enemyRB = GetComponent<Rigidbody>();
         gameManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<GameManager>();
         spawner = GameObject.FindGameObjectWithTag("Spawn Manager").GetComponent<SpawnManager>();
@@ -44,6 +46,7 @@ public class Enemy : MonoBehaviour
         {
             if (other.tag == "Projectile" && hitcooldown)
             {
+                //animationscript.triggerHurtAnimtion();
                 knockbackdir = other.transform.position - transform.position;
                 enemyRB.AddForce(knockbackdir * 3f, ForceMode.Impulse);
                 health -= 25;
