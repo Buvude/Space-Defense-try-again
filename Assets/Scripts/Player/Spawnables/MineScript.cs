@@ -27,7 +27,7 @@ public class MineScript : MonoBehaviour
             Debug.Log("Tactical Nuke!!!! INCOMMING!!!!");
             exParticle.Play();
             exSoundEffect.PlayOneShot(explosionSound, 1.0f);
-            Destroy(gameObject);
+            Destroy(gameObject, 1.0f);
         }
     }
 }
