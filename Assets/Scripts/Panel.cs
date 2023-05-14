@@ -5,12 +5,14 @@ using UnityEngine;
 public class Panel : MonoBehaviour
 {
     public Material thisMaterial;
+    public Texture Broken, unbroken;
     public bool broken = false;
     public GameManager gameManager;
+
     // Start is called before the first frame update
     void Awake()
     {
-
+        thisMaterial.mainTexture= Broken;
         gameManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<GameManager>();
         gameManager.panelsInScene.Add(this);
     }
@@ -20,11 +22,11 @@ public class Panel : MonoBehaviour
     {
         if (broken)
         {
-            thisMaterial.color = Color.red;
+            thisMaterial.mainTexture = Broken;
         }
         else
         {
-            thisMaterial.color = Color.green;
+            thisMaterial.mainTexture = unbroken;
         }
     }
 
