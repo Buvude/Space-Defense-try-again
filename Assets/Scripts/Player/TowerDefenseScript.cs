@@ -9,6 +9,7 @@ public class TowerDefenseScript : MonoBehaviour
     public Transform spawnLocation;
     public float scrap;
     Vector3 rotation;
+    public GameManager gm;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class TowerDefenseScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        gm.currencyText.text = "Scrap:  " + scrap;
         if (scrap >= 50 && Input.GetKeyDown(KeyCode.T))
         {
             rotation = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y-90, transform.eulerAngles.z);
